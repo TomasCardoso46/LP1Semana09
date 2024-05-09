@@ -16,10 +16,10 @@ namespace IntCollections
 
             foreach (var collection in diflists)
             {
-                Console.WriteLine("Collection:");
+                Console.Write($"\n{collection.ToString()}");
                 foreach (int item in collection)
                 {
-                    Console.WriteLine(item);
+                    Console.Write($" {item},");
                 }
             }
         }
