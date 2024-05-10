@@ -3,14 +3,7 @@ using System.Collections.Generic;
 
 namespace EqualPlayer
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
-    }
-    public enum PlayerClass
+        public enum PlayerClass
     {
         Tank,
         Fighter,
@@ -61,6 +54,10 @@ namespace EqualPlayer
             players.Add(new Player(PlayerClass.Tank,"Ana"));
             players.Add(new Player(PlayerClass.Slayer,"Paulo"));
             players.Add(new Player(PlayerClass.Tank,"Ana"));
+            foreach (Player p in players)
+            {
+                Console.WriteLine($"{p.Name} is a {p.PClass}");
+            }
         }
     }
 }
