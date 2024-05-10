@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;   
 
 namespace EqualPlayer
 {
@@ -50,6 +51,16 @@ namespace EqualPlayer
                 hash = hash * 23 + (Name != null ? Name.GetHashCode() : 0);
                 return hash;
             }
+        }
+    }
+    class Program
+    {
+        static void Main(String[] args)
+        {
+            HashSet<Player> players = new HashSet<Player>();
+            players.Add(new Player(PlayerClass.Tank,"Ana"));
+            players.Add(new Player(PlayerClass.Slayer,"Paulo"));
+            players.Add(new Player(PlayerClass.Tank,"Ana"));
         }
     }
 }
